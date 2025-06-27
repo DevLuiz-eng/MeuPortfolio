@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Meu Portfólio</title>
+  </head>
+  <body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+      <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+        <li><a href="#contato" class="menu-link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+      <img
+        src="img/perfil-profissional-300.png"
+        alt="Luiz Foto"
+        class="foto-perfil"
+      />
+      <h1>Luiz Armando</h1>
+      <p class="sub">Desenvolvedor Full-Stack</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+          Sou desenvolvedor Full Stack com foco em criar aplicações funcionais,
+          modernas e responsivas. Tenho experiência com tecnologias como HTML,
+          CSS, JavaScript, C#, Java e bancos de dados, além de projetos próprios
+          que demonstram minha capacidade de entregar soluções completas, tanto
+          no frontend quanto no backend. Estou sempre buscando evoluir, aprender
+          novas ferramentas e transformar ideias em sistemas práticos e
+          eficientes.
+        </p>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <div class="projetos-caixa">
+        <div class="projetos-card">
+          <img
+            src="img/icons8-calculadora-de-maçã-200.png"
+            alt="sem imagem"
+            class="projeto-1"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Calculadora</h3>
+            <p class="paragrafo-projeto">
+              Aplicação de console em C# que realiza operações básicas (soma,
+              subtração, multiplicação e divisão). Desenvolvida com foco em
+              lógica, estrutura condicional e validação de entradas para evitar
+              erros durante a execução.
+            </p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <img src="img/unibet-logo.png" alt="sem imagem" class="projeto-1" />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Casa de Apostas</h3>
+            <p class="paragrafo-projeto">
+              Plataforma simples desenvolvida em C++ para simular apostas
+              esportivas com sistema de saldo, login e funcionalidades básicas
+              de gerenciamento de apostas. Projeto focado em lógica de
+              programação, controle de fluxo e estruturação de dados, integrando
+              elementos de interface e regras de negócio.
+            </p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="img/sistema-bancario-logo.png"
+            alt="sem imagem"
+            class="projeto-1"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Sistema Bancário</h3>
+            <p class="paragrafo-projeto">
+              Projeto de console que simula operações bancárias como cadastro de
+              clientes, consulta de saldo, depósito e saque. Desenvolvido com
+              foco em lógica, menus interativos, validações e armazenamento de
+              dados em tempo de execução. Feito em C#.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contatos">
+      <h2 class="contatos-titulos">Entre em Contato</h2>
+      <form action="" class="formulario-contato" id="formulario">
+        <div class="grupo-form">
+          <input type="text" placeholder="Nome" class="campo-form" id="nome" />
+        </div>
+        <div class="grupo-form">
+          <textarea
+            class="campo-form"
+            placeholder="Digite sua mensagem"
+            rows="4"
+            id="mensagem"
+          ></textarea>
+        </div>
+
+        <button type="submit" onclick="send(event)" class="botao-form">
+          Enviar pro WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <script>
+      function send(event) {
+
+        event.preventDefault();
+
+        const nome = document.querySelector("#nome").value;
+        const mensagem = document.querySelector("#mensagem").value;
+        const telefone = "5575982450173";
+        
+        if (nome == '') {
+          alert("Digite seu nome.")
+          return 0;
+        } 
+        else if(mensagem == '') {
+          alert("Campo de mensagem vazio!")
+          return 0;
+        }
+
+        const texto = `Olá, me chamo ${nome} e vim pelo seu site. ${mensagem}`;
+        const msgFormatada = encodeURIComponent(texto);
+
+        const url = `https://wa.me/5575982450173?text=${msgFormatada}`;
+
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
