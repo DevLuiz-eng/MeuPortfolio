@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Luiz Developer - Portfólio</title>
+    <title>Luiz Dev - Portfólio</title>
   </head>
   <body>
     <div class="particulas"></div>
@@ -96,17 +96,77 @@
 
         <div class="projetos-card">
           <a href="https://mariobyluiz.netlify.app/" target="_blank">
-            
             <img
-            src="img/2x1_SuperMarioHub_image1600w.jpg"
-            alt="sem imagem"
-            class="projeto-1"
+              src="img/2x1_SuperMarioHub_image1600w.jpg"
+              alt="sem imagem"
+              class="projeto-1"
             />
           </a>
           <div class="caixa-textos-projetos">
             <h3 class="info-projetos">Mario The game</h3>
             <p class="paragrafo-projeto">
-              Este projeto é um mini game interativo baseado no clássico Super Mario, desenvolvido para praticar manipulação de elementos DOM, lógica de colisão e animações em JavaScript puro.
+              Este projeto é um mini game interativo baseado no clássico Super
+              Mario, desenvolvido para praticar manipulação de elementos DOM,
+              lógica de colisão e animações em JavaScript puro.
+            </p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <a href="https://clima-luizdev.netlify.app/" target="_blank">
+            <img src="img/clima.webp" alt="sem imagem" class="projeto-1" />
+          </a>
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Site de Previsão do tempo</h3>
+            <p class="paragrafo-projeto">
+              Desenvolvi um site de previsão do tempo com interface moderna e
+              responsiva. O usuário pode buscar qualquer cidade e visualizar
+              informações como temperatura, umidade e condições climáticas em
+              tempo real. Utilizei HTML, CSS e JavaScript, integrando uma API
+              externa de clima. O site conta com fundo que muda automaticamente
+              com paisagens, conforme o clima ou o horário. Esse projeto
+              demonstra minhas habilidades com front-end, APIs e foco na
+              experiência do usuário.
+            </p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <a href="https://coinverterbyluiz.netlify.app/" target="_blank">
+            <img src="img/coinverter.webp" alt="sem imagem" class="projeto-1" />
+          </a>
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Coinverter</h3>
+            <p class="paragrafo-projeto">
+              Criei o Coinverter, um conversor de moedas simples, prático e
+              responsivo. O usuário escolhe duas moedas e insere um valor para
+              ver a conversão em tempo real. Utilizei HTML, CSS e JavaScript,
+              com integração a uma API de câmbio atualizada. A interface é
+              intuitiva, com foco na usabilidade e visual moderno. Esse projeto
+              reforça meus conhecimentos em consumo de APIs e manipulação de
+              dados no front-end.
+            </p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <a href="https://todolistsenai.netlify.app/" target="_blank">
+            <img
+              src="img/lista-de-tarefas.jpg"
+              alt="sem imagem"
+              class="projeto-1"
+            />
+          </a>
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Lista de tarefas</h3>
+            <p class="paragrafo-projeto">
+              Desenvolvi uma lista de tarefas interativa usando HTML, CSS e
+              JavaScript. O usuário pode adicionar, marcar como concluída e
+              remover tarefas com facilidade. Os dados são armazenados
+              localmente, permitindo que a lista seja mantida mesmo após
+              recarregar a página. O design é limpo, com foco na usabilidade e
+              organização. Esse projeto demonstra minha habilidade em
+              manipulação de DOM e lógica com arrays no JavaScript.
             </p>
           </div>
         </div>
@@ -136,19 +196,17 @@
 
     <script>
       function send(event) {
-
         event.preventDefault();
 
         const nome = document.querySelector("#nome").value;
         const mensagem = document.querySelector("#mensagem").value;
         const telefone = "5575982450173";
-        
-        if (nome == '') {
-          alert("Digite seu nome.")
+
+        if (nome == "") {
+          alert("Digite seu nome.");
           return 0;
-        } 
-        else if(mensagem == '') {
-          alert("Campo de mensagem vazio!")
+        } else if (mensagem == "") {
+          alert("Campo de mensagem vazio!");
           return 0;
         }
 
